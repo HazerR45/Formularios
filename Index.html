@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <title>Solicitud de Trabajo / Formularios</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+    body {background-color: rgb(28, 158, 160); color:white}
+ </style>
+</head>
+<body>
+    <h1>Solicitud de trabajo</h1>
+    <hr>
+    <form action="/procesa.php" method="get">
+        <fieldset>
+            <legend><h2>Datos Personales</h2></legend>
+            <label for="nomb"><p>Nombre:
+            <input id="nomb" name="Nombre" type="text" value=""></p></label>
+            <label for="ape"><p>Apellidos:
+            <input id="ape" name="Apellidos" type="text" value=""></p></label>
+            Género: <select name="Género">
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+                <option value="Helicóptero">Helicóptero</option>
+                <option value="Palo">Palo</option>
+                <option value="Bolsa de plástico reciclable">Bolsa de plástico reciclable</option>
+                <option value="Guinea Ecuatorial">Guinea Ecuatorial</option>
+                <option value="Otro">Otro</option>
+            </select><br><br>
+            Fecha de nacimiento: <input type="date" name="fecha_nacimiento"><br>
+            <label for="ema"><p>Introduce tu email: <input id="ema" type="email" name="correo_electrónico"></p></label>
+            <label for="dif"><p><input id="dif" type="checkbox" name="discapacidad_física">Tengo alguna discapacidad física que me podría complicar el trabajo</p></label>
+            <label for="dim"><p><input id="dim" type="checkbox" name="discapacidad_mental">Tengo alguna discapacidad mental que me podría complicar el trabajo</p></label>
+            <label for="pds"><p><input id="pds" type="checkbox" name="problema_de_salud">Tengo algún problema de salud que me podría complicar el trabajo</p></label>
+            <label for="prp"><p><input id="prp" type="checkbox" name="problemas_personales">Tengo algún problema personal que me podría complicar el trabajo</p></label>
+        </fieldset>
+        <fieldset>
+            <legend><h2>Otros Datos (No es obligatorio rellenar)</h2></legend>
+            Envíanos un video donde explicas cómo eres y por qué crees que te mereces este puesto de trabajo: <input type="file" name="video"><br><br>
+            <textarea name="comentarios" rows="4" columns="50">Si tienes algún comentario más que decir, escríbelo aquí</textarea>
+        </fieldset><br>
+        <input type="submit" value="Enviar Datos">
+        <input type="reset" value="Reiniciar">
+    </form>
+</body>
+</html>
